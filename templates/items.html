@@ -1,0 +1,53 @@
+<div class="container" ng-controller="ItemsCtrl">
+    <div class="actual-content">
+        <div class="inner">
+            <div class="page-title">
+                <h3>Add Item</h3>
+            </div>
+            <div class="form-container">
+                <form class="form-group" name='addItemForm' action="" method='POST'>
+                    <div class="field">
+                        <label for="itemname">Item Name</label>
+                        <input ng-model="itemName" class="form-control" type="text" id="itemname" name="itemname"/>
+                    </div>
+                    <div class="field">
+                        <label for="size">Size</label>
+                        <input ng-model="itemSize" class="form-control" type="text" id="size" name="size">
+                    </div>
+                    <div class="field">
+                        <label for="brand">Brand</label>
+                        <input ng-model="itemBrand" class="form-control" type="text" id="brand" name="brand">
+                    </div>
+                    <div class="field">
+                        <label for="type">Type</label>
+                        <input ng-model="itemType" class="form-control" type="text" id="type" name="type">
+                    </div>
+                    <div class="actions" style="margin-top: 15px; text-align:left;">
+                        <!-- <input type="checkbox"> Remember Me </input> -->
+                        <button type="button" class="btn btn-success" ng-click="addItem()">Add Item</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <table class='table table-bordered'>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Item Name</th>
+            <th>size</th>
+            <th>brand</th>
+            <th>type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in items track by $index">
+            <td>{{$index + 1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.size}}</td>
+            <td>{{item.brand}}</td>
+            <td>{{item.type}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

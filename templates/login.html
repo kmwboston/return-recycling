@@ -1,0 +1,48 @@
+<!--<div class="container">-->
+    <!--<div class="row">-->
+        <!--<div class="col-xs-12 text-center">-->
+            <!--<h4>-->
+                <!--<img width="380px" src="http://static1.squarespace.com/static/54deb43be4b02c194ee771de/t/5605bfe6e4b0c937d1656266/1446435582349/?format=1500w">-->
+            <!--</h4>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row">-->
+        <!--<div class="col-sm-4 col-sm-offset-4 text-center">-->
+
+            <!--<form class="form-group" name='loginForm' action="" method='POST'>-->
+                <!--<div class="field" style="text-align:left;">-->
+                    <!--<label for="username">Email</label>-->
+                    <!--<input class="form-control" type="text" id="username" name="username" value=""/>-->
+                <!--</div>-->
+                <!--<div class="field" style="text-align:left;">-->
+                    <!--<label for="password">Password</label>-->
+                    <!--<input class="form-control" type="password" id="password" name="password" value="">-->
+                <!--</div>-->
+                <!--<div class="field" style="text-align: left;">-->
+                    <!--<label for="remember">Remember Me</label>-->
+                    <!--<input id="remember" type="checkbox" name="remember-me" />-->
+                <!--</div>-->
+                <!--<div class="actions" style="margin-top: 15px;">-->
+                    <!--<a class="btn btn-primary" style="float:left;width:47%;" href="../views/app.html">Login</a>-->
+                    <!--<a class="btn btn-primary" style="width: 47%;float:right;" >Request Access</a>-->
+                <!--</div>-->
+            <!--</form>-->
+
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="container">
+    <form ng-submit="login(username, password)">
+        <div class="form-group">
+            <label>Username</label>
+            <input class="form-control" type="text" ng-model="username">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input class="form-control" type="password" ng-model="password">
+        </div>
+        <input class="btn btn-success btn-lg btn-block" type="submit" value="Login">
+    </form>
+</div>
